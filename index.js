@@ -1,7 +1,7 @@
 // Fill in your client ID and client secret that you obtained
 // while registering the application
-const clientID = '7e015d8ce32370079895'
-const clientSecret = '2b976af0e6b6ceea2b1554aa31d1fe94ea692cd9'
+const clientID = 'Ov23liG7ccquk0e5c9nX'
+const clientSecret = 'e63e95688437ac2eb8da6a12cc6014054ec0efe5'
 
 const Koa = require('koa');
 const path = require('path');
@@ -48,4 +48,8 @@ const oauth = async ctx => {
 app.use(main);
 app.use(route.get('/oauth/redirect', oauth));
 
-app.listen(8080);
+// app.listen(8080);
+
+app.listen(8080, () => {
+  console.log('服务启动：http://localhost:8080');
+});
